@@ -1,5 +1,6 @@
 const TelegramBot = require("node-telegram-bot-api");
 require("dotenv").config();
+const keepAlive = require("./app")
 
 const token = process.env.API_KEY;
 
@@ -43,3 +44,5 @@ bot.on("message", async (msg) => {
       );
   }
 });
+
+keepAlive();
