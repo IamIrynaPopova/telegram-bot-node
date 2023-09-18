@@ -3,7 +3,7 @@ require("dotenv").config();
 
 const token = process.env.API_KEY;
 
-const bot = new TelegramBot(token, { polling: false });
+const bot = new TelegramBot(token, { polling: true });
 bot.setMyCommands([
   {
     command: "/start",
